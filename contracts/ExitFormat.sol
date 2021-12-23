@@ -45,6 +45,7 @@ library ExitFormat {
     // * custom metadata (optional field, can be zero bytes). This can be used flexibly by different protocols.
     struct Allocation {
         bytes32 destination;
+        uint256 chainId;
         uint256 amount;
         uint8 allocationType;
         bytes metadata;
