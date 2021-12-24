@@ -12,9 +12,10 @@ export function rehydrateExit(exitResult: Result) {
       if (key == "allocations") {
         object[key] = entry[key].map((allocation) => ({
           destination: allocation[0],
-          amount: BigNumber.from(allocation[1]),
-          allocationType: allocation[2],
-          metadata: allocation[3],
+          chainId: allocation[1],
+          amount: BigNumber.from(allocation[2]),
+          allocationType: allocation[3],
+          metadata: allocation[4],
         }));
       } else if (Number(key) !== Number(key)) object[key] = entry[key];
     });

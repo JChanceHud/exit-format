@@ -24,6 +24,7 @@ describe("ExitFormat (solidity)", function () {
     const allocation: Allocation = {
       destination:
         "0x00000000000000000000000096f7123E3A80C9813eF50213ADEd0e4511CB820f",
+      chainId: process.env.CHAIN_NETWORK_ID ?? "0x01",
       amount: "0x01",
       allocationType: AllocationType.simple,
       metadata: "0x",
@@ -44,6 +45,7 @@ describe("ExitFormat (solidity)", function () {
           {
             destination:
               "0x00000000000000000000000096f7123E3A80C9813eF50213ADEd0e4511CB820f",
+            chainId: process.env.CHAIN_NETWORK_ID ?? "0x01",
             amount: "0x01",
             allocationType: AllocationType.simple,
             metadata: "0x",
@@ -74,6 +76,7 @@ describe("ExitFormat (solidity)", function () {
       allocations: [
         {
           destination: "0x000000000000000000000000" + alice.address.slice(2), // padded alice
+          chainId: process.env.CHAIN_NETWORK_ID ?? "0x01",
           amount,
           allocationType: AllocationType.simple,
           metadata: "0x",
